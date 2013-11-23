@@ -11,7 +11,27 @@
 |
 */
 
-Route::get('/', function()
+/*
+|--------------------------------------------------------------------------
+| Note!!!
+|--------------------------------------------------------------------------
+| the routes is in the app/routes directory. i divided the routes into different
+| file so it can be clean as the system goes larger
+|
+*/
+
+/*--------------------------------------------------------------------------
+|  Routes - app/routes/
+|--------------------------------------------------------------------------
+| 1. Website   - Website.php
+| 2. Dashboard - Dashboard.php 
+| 3. Reports   - Reports.php
+| 4. Settings  - Settings.php
+| 5. Auth      - Auth.php
+*/
+
+foreach (glob(dirname(__FILE__)."/routes/*.php") as $filename)
 {
-	return View::make('hello');
-});
+    include_once $filename;
+}
+
