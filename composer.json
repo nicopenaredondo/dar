@@ -7,7 +7,8 @@
 		"laravel/framework": "4.0.*",
 		"way/generators": "1.0.*@dev",
 		"jasonlewis/expressive-date": "dev-master",
-		"fzaninotto/faker": "1.3.*@dev"
+		"fzaninotto/faker": "1.3.*@dev",
+		"loic-sharma/profiler": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
