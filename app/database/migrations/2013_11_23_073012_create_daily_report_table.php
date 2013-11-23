@@ -14,6 +14,7 @@ class CreateDailyReportTable extends Migration {
 	{
 		Schema::create('daily_report', function(Blueprint $table) {
 			$table->increments('daily_report_id');
+			$table->integer('user_id');
 			$table->string('project_name',64);
 			$table->timestamp('time_in');
 			$table->timestamp('time_out');
