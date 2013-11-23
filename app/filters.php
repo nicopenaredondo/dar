@@ -35,9 +35,8 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	if (Auth::check()) return Redirect::to('dashboard');
 });
-
 
 Route::filter('auth.basic', function()
 {
@@ -57,7 +56,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	if (Auth::guest()) return Redirect::guest('auth/login');
 });
 
 /*
