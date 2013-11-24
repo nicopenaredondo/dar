@@ -2,8 +2,20 @@
 
 class DailyReportTask extends Eloquent 
 {
-	protected $guarded 		= array();
-	public static $rules 	= array();
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'daily_report_task';
+
+	/**
+	 * The primary key used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'daily_report_task_id';
+
 
 	public function dailyreport()
 	{

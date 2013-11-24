@@ -2,8 +2,20 @@
 
 class UserProfile extends Eloquent 
 {
-	protected $guarded 		= array();
-	public static $rules 	= array();
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'user_profile';
+
+	/**
+	 * The primary key used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'user_profile_id';
+
 
 	public function user()
 	{

@@ -2,8 +2,20 @@
 
 class DailyReport extends Eloquent 
 {
-	protected $guarded 		= array();
-	public static $rules 	= array();
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'daily_report';
+
+	/**
+	 * The primary key used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'daily_report_id';
+
 
 	public function user()
 	{
