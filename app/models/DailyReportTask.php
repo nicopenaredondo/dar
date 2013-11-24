@@ -14,11 +14,11 @@ class DailyReportTask extends Eloquent
 	 *
 	 * @var string
 	 */
-	protected $table = 'daily_report_task_id';
+	protected $primaryKey = 'daily_report_task_id';
 
 
 	public function dailyreport()
 	{
-		$this->belongsTo('DailyReport','daily_report_id');
+		return $this->belongsTo('DailyReport','daily_report_id');
 	}
 }

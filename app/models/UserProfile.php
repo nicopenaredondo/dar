@@ -14,11 +14,11 @@ class UserProfile extends Eloquent
 	 *
 	 * @var string
 	 */
-	protected $table = 'user_profile_id';
+	protected $primaryKey = 'user_profile_id';
 
 
 	public function user()
 	{
-		$this->belongsTo('User','user_id');
+		return $this->belongsTo('User','user_id');
 	}
 }

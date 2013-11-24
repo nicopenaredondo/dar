@@ -14,16 +14,16 @@ class DailyReport extends Eloquent
 	 *
 	 * @var string
 	 */
-	protected $table = 'daily_report_id';
+	protected $primaryKey = 'daily_report_id';
 
 
 	public function user()
 	{
-		$this->belongsTo('User','user_id');
+		return $this->belongsTo('User','user_id');
 	}
 
 	public function dailyreporttask()
 	{
-		$this->hasMany('DailyReportTask','daily_report_id');
+		return $this->hasMany('DailyReportTask','daily_report_id');
 	}
 }

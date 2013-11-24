@@ -18,7 +18,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface
 	 *
 	 * @var string
 	 */
-	protected $table = 'user_id';
+	protected $primaryKey = 'user_id';
 
 
 	/**
@@ -58,14 +58,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface
 		return $this->email;
 	}
 
-	public function userprofile()
+	public function userrofile()
 	{
-		$this->hasOne('UserProfile','user_id')
+		return $this->hasOne('UserProfile','user_id');
 	}
 
 	public function dailyreport()
 	{
-		$this->hasMany('DailyReport','user_id')
+		return $this->hasMany('DailyReport','user_id');
 	}
 
 }
